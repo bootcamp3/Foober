@@ -1,13 +1,25 @@
 module Foober
   class API < Grape::API
     format :json
+    content_type :json, "application/json;charset=UTF-8"
     version 'v1', using: :path
     prefix 'api'
 
     resource :notify do
       desc 'send pending order'
       get do
-        Order.where('status = ?', :pending).first
+        order = Order.where('user_id = ?', true).where('status = ?', :pending).first
+        if order
+          {
+            order: {
+              id: order.id
+            },
+            user: {
+              name: order.user.name,
+              address: order.user.address
+            }
+          }
+        end
       end
     end
 

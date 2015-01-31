@@ -3,22 +3,11 @@
     <h2>選擇你要的食材和風味</h2>
     <div>
       <p>您冰箱裡的食材有</p>
+    </div>
       <%= form_for @recipe, :url => recipes_search_path do |r| %>
         <%= r.collection_check_boxes(:ingredient_ids, Ingredient.all, :id, :name) %>
-      
-    </div>
-    <div>
-<!--       <p>風味</p>
-        <select id="category" name="category">
-            <option value="">-Categroy-</option>
-            <option value="1">food</option>
-            <option value="1">food2</option>
-            <option value="1">food3</option>
-            <option value="1">food4</option>
-        </select> -->
-      <!-- 下拉式選單 -->
-    </div>
-    <%= r.submit "送出", :class => "button special" %>
-    <% end %>
+        
+        <div><%= r.submit "送出", :class => "button special" %></div>
+      <% end %>
   </header>
 </section>

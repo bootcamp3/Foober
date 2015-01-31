@@ -8,4 +8,14 @@ class ApplicationController < ActionController::Base
   def current_user
     current_user = User.find_by_name(session[:name]) if session[:name]
   end
+
+  protected
+
+  def authentication?
+    if current_user 
+      true
+    else
+      redirect_to :root
+    end
+  end
 end

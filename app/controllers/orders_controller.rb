@@ -1,4 +1,5 @@
 class OrdersController < ApplicationController
+  before_filter :authentication?
 
   def new
     @order = Order.new
