@@ -5,13 +5,14 @@
 <section id="main">
   <header>
     <h2>請給廚師評價</h2>
-    <div>
+  </br>
+    <div class="all-stars">
       <div class="white-stars">
         <%= 5.times.map { |i| image_tag( "../images/white-star.png", :data => { :no => i }, :class => "white-star") }.join.html_safe %>
       </div>
       <div class="gold-stars">
       <%= 5.times.map { |i| image_tag( "../images/gold-star.png", :data => { :no => i }, :class => "gold-star") }.join.html_safe %>
-    </div>
+      </div>
     </div>
 
     <div class="box alt"></div>
