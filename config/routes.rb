@@ -24,6 +24,7 @@ Rails.application.routes.draw do
   resources :orders
 
   # grape API
-  # mount API => '/api'
+
+  mount Foober::API => '/'
 
 end
