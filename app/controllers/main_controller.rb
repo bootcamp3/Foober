@@ -37,6 +37,10 @@ class MainController < ApplicationController
 
   end
 
+  def stars
+    render :text => params.inspect
+  end
+
   private
 
   def authentication?
