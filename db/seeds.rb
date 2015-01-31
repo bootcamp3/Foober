@@ -11,33 +11,33 @@ Ingredient.create(name: "蝦仁")
 Recipe.create(name: "壽喜燒牛丼飯",
               description: "喜歡吃日式料理中的牛丼嗎？快速的動手做吧～",
               flavor: "日式",
-              ingredient: ["牛肉","洋蔥","飯"])
+              ingredient: "牛肉,洋蔥,飯")
 Recipe.create(name: "蔬菜牛肉湯",
               description: "餐廳內常喝到的牛肉蔬菜湯，動手自己做吧～",
               flavor: "中式",
-              ingredient: ["番茄","高麗菜","牛肉"])
+              ingredient: "番茄,高麗菜,牛肉")
 Recipe.create(name: "義大利肉醬麵餐盒",
               flavor: "義式",
-              ingredient: ["義大利麵","豬肉","番茄"])
+              ingredient: "義大利麵,豬肉,番茄")
 Recipe.create(name: "茄汁燉飯",
               flavor: "中式",
-              ingredient: ["飯","番茄","洋蔥"])
+              ingredient: "飯,番茄,洋蔥")
 Recipe.create(name: "蝦仁蛋包飯",
               flavor: "日式",
-              ingredient: ["飯","蝦仁","蛋"])
+              ingredient: "飯,蝦仁,蛋")
 Recipe.create(name: "滑蛋蝦仁燴飯",
               flavor: "港式",
-              ingredient: ["飯","蝦仁","蛋"])
+              ingredient: "飯,蝦仁,蛋")
 Recipe.create(name: "蒜頭蒸蛋",
               flavor: "中式",
-              ingredient: ["蛋","大蒜"])
+              ingredient: "蛋,大蒜")
 Recipe.create(name: "韭黃炒牛肉絲",
               flavor: "中式",
-              ingredient: ["韭黃","牛肉"])
+              ingredient: "韭黃,牛肉")
 Recipe.create(name: "蕃茄海鮮義大利麵",
               flavor: "義式",
-              ingredient: ["番茄","蝦仁","義大利麵"])
+              ingredient: "番茄,蝦仁,義大利麵")
 Recipe.create(name: "韭黃牛肉餛飩餡",
               flavor: "中式",
-              ingredient: ["韭黃","牛肉","麵粉"])
+              ingredient: "韭黃,牛肉,麵粉")
 
