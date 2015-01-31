@@ -1,4 +1,4 @@
-<section id="main" class="container">
+<section id="main">
   <header>
     <h2>推薦菜單</h2>
     <div>
@@ -7,10 +7,9 @@
     </div>
 
     <div>
-      <%= link_to "喜歡", main_success_path %>
+      <%= link_to "喜歡", main_success_path, :class => "button special" %>
       <p>/</p>
-      <%= link_to "不喜歡" %>
+      <%= link_to "不喜歡", main_success_path, :class => "button"  %>
     </div>
-    <a href="">送出</a>
   </header>
 </section>
