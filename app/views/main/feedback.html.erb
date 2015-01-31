@@ -1,0 +1,41 @@
+<%= form_tag main_stars_path do %>
+
+<%= hidden_field_tag :stars_count, 0, :id => "stars-count" %>
+
+<section id="main">
+  <header>
+    <h2>請給廚師評價</h2>
+    <div>
+      <div class="white-stars">
+        <%= 5.times.map { |i| image_tag( "../images/white-star.png", :data => { :no => i }, :class => "white-star") }.join.html_safe %>
+      </div>
+      <div class="gold-stars">
+      <%= 5.times.map { |i| image_tag( "../images/gold-star.png", :data => { :no => i }, :class => "gold-star") }.join.html_safe %>
+    </div>
+    </div>
+
+    <div class="box alt"></div>
+    <div><%= submit_tag "送出", :class => "button special feedback", :id => "star-submit" %></div>
+
+  </header>
+</section>
+<% end %>
+
+<script>
+ $(document).ready(function() {
+
+  $( ".white-star" ).click(function(){
+    $(".gold-star:hidden").first().show();
+  });
+
+  $( ".gold-star" ).click(function(){
+    $(".gold-star:visible").last().hide();
+  });
+
+  $("#star-submit").click(function(){
+    var c = $(".gold-star:visible").size();
+    $("#stars-count").val(c);
+  })
+
+ });
+</script>

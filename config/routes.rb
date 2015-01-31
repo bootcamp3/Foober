@@ -9,6 +9,8 @@ Rails.application.routes.draw do
     get 'menu'
     get 'success'
     get 'feedback'
+
+    post 'stars'
   end
 
   # Recipes
@@ -22,6 +24,6 @@ Rails.application.routes.draw do
   resources :orders
 
   # grape API
-  mount API => '/api'
+  # mount API => '/api'
 
 end

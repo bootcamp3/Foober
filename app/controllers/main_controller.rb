@@ -1,4 +1,5 @@
 class MainController < ApplicationController
+
   def index
 
 
@@ -26,4 +27,9 @@ class MainController < ApplicationController
   def feedback
 
   end
+
+  def stars
+    render :text => params.inspect
+  end
+
 end
