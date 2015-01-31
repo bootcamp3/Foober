@@ -1,16 +1,15 @@
 Rails.application.routes.draw do
 
-
   # Main
+  root :to => 'main#index'
 
   namespace :main do
-     get 'index'
-     get 'branch'
-     get 'ingredient' => 'ingredient'
-     get 'menu'
-     get 'success'
-     get 'feedback'
-  end  
+    get 'branch'
+    get 'ingredient'
+    get 'menu'
+    get 'success'
+    get 'feedback'
+  end
 
   # Recipes
 
@@ -24,4 +23,3 @@ Rails.application.routes.draw do
   post 'orders/new' => 'orders#new'
 
 end
-
