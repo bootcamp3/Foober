@@ -9,6 +9,8 @@ Rails.application.routes.draw do
     get 'menu'
     get 'success'
     get 'feedback'
+
+    post 'stars'
   end
 
   # Recipes
