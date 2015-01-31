@@ -7,7 +7,16 @@ module Foober
     resource :notify do
       desc 'send pending order'
       get do
-        Order.where('status = ?', :pending).first
+        order = Order.where('status = ?', :pending).first
+        {
+          order: {
+            id: order.id
+          },
+          user: {
+            name: order.user.name,
+            address: order.user.address
+          }
+        }
       end
     end
 
