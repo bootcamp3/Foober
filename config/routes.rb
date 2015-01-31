@@ -6,11 +6,11 @@ Rails.application.routes.draw do
   namespace :main do
      get 'index'
      get 'branch'
-     get 'ingredient' => 'ingredient'
+     get 'ingredient'
      get 'menu'
      get 'success'
      get 'feedback'
-  end  
+  end
 
   # Recipes
 
