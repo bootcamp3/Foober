@@ -6,7 +6,7 @@ class MainController < ApplicationController
 
   def branch
 
-  
+
   end
 
   def ingredient
@@ -16,7 +16,7 @@ class MainController < ApplicationController
 
   def menu
 
-    redirect_to recipes_result_path
+
   end
 
   def success
@@ -24,6 +24,6 @@ class MainController < ApplicationController
   end
 
   def feedback
-    
+
   end
 end
