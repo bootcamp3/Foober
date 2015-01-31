@@ -1,0 +1,10 @@
+<section id="main">
+  <header>
+    <h2>請給廚師評價</h2>
+    <div>
+      <%= 5.times.map { image_tag "../images/white-star.png", :class => "star" }.join.html_safe %>
+    </div>
+    <div><%= link_to "送出", root_path, :class => "button special" %></div>
+
+  </header>
+</section>

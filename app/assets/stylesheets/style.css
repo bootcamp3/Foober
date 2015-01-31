@@ -259,6 +259,7 @@
     select:invalid,
     textarea:invalid {
       box-shadow: none;
+      text-align: center;
     }
 
     input[type="text"]:focus,
