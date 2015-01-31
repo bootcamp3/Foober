@@ -8,7 +8,7 @@ module Foober
     resource :notify do
       desc 'send pending order'
       get do
-        order = Order.where.not('user_id = ?', nil).where('status = ?', :pending).first
+        order = Order.where('status = ?', :pending).first
         if order
           {
             order: {
