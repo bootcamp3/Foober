@@ -4,6 +4,8 @@ Rails.application.routes.draw do
   root :to => 'main#index'
 
   namespace :main do
+    get 'login'
+    get 'signout'
     get 'branch'
     get 'ingredient'
     get 'menu'
@@ -22,6 +24,6 @@ Rails.application.routes.draw do
   resources :orders
 
   # grape API
-  mount Foober::API => '/'
+  # mount Foober::API => '/'
 
 end

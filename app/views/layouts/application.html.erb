@@ -11,7 +11,11 @@
   <h1><%= link_to "Foober", root_path %></h1>
   <nav id="nav">
     <ul>
-      <li><a href="#" class="button">Sign Up</a></li>
+      <% if current_user %>
+        <li>Hi, <%= current_user.name %><%= link_to "Sign Out", main_signout_path %></li>
+      <% else %>
+        <li><%= link_to "Log In", main_login_path %></li>
+      <% end %>
     </ul>
   </nav>
 </header>

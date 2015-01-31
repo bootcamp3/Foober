@@ -1,4 +1,8 @@
 class Order < ActiveRecord::Base
+  belongs_to :user
+  belongs_to :chef
+  belongs_to :recipe_id
+
   state_machine :status, :initial => :pending do
     state :pending
     state :chef_confirmed
