@@ -36,8 +36,8 @@ ActiveRecord::Schema.define(version: 20150131081024) do
 
   create_table "ingredients", force: :cascade do |t|
     t.string   "name",       limit: 255
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.datetime "created_at",             null: false
+    t.datetime "updated_at",             null: false
   end
 
   create_table "orders", force: :cascade do |t|
@@ -52,10 +52,10 @@ ActiveRecord::Schema.define(version: 20150131081024) do
   create_table "recipes", force: :cascade do |t|
     t.string   "name",        limit: 255
     t.string   "description", limit: 255
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.datetime "created_at",                null: false
+    t.datetime "updated_at",                null: false
     t.string   "flavor",      limit: 255
-    t.string   "ingredient",  limit: 255, default: ""
+    t.text     "ingredient",  limit: 65535
     t.string   "content",     limit: 255
   end
 
