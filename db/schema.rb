@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150131072856) do
+ActiveRecord::Schema.define(version: 20150131081024) do
 
   create_table "chefs", force: :cascade do |t|
     t.string   "name",       limit: 255
@@ -27,8 +27,7 @@ ActiveRecord::Schema.define(version: 20150131072856) do
   end
 
   create_table "feedbacks", force: :cascade do |t|
-    t.integer  "user_id",      limit: 4
-    t.integer  "chef_id",      limit: 4
+    t.integer  "order_id",     limit: 4
     t.string   "chef_to_user", limit: 255
     t.string   "user_to_chef", limit: 255
     t.datetime "created_at",               null: false
