@@ -10,7 +10,7 @@ module Foober
       get do
         order = Order.where('status = ?', :pending).first
         if order
-          {
+          [{
             order: {
               id: order.id
             },
@@ -18,7 +18,7 @@ module Foober
               name: order.user.name,
               address: order.user.address
             }
-          }
+          }]
         end
       end
     end
