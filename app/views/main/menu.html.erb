@@ -2,13 +2,12 @@
   <header>
     <h2>推薦菜單</h2>
     <div>
-      <p>food_name</p><br>
+      <p><%= @recipes.first.name %></p><br>
       <img class="food" src="" alt="">
     </div>
 
     <div>
-      <%= link_to "喜歡", main_success_path, :class => "button special" %>
-      <p>/</p>
+      <%= link_to "喜歡", recipes_result_path(:recipe_id => @recipes.first.id), :class => "button special"%>
       <%= link_to "不喜歡", main_success_path, :class => "button"  %>
     </div>
   </header>

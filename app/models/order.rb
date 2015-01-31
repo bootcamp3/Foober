@@ -1,7 +1,7 @@
 class Order < ActiveRecord::Base
   belongs_to :user
   belongs_to :chef
-  belongs_to :recipe_id
+  belongs_to :recipe
 
   state_machine :status, :initial => :pending do
     state :pending

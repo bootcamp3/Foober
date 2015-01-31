@@ -26,7 +26,7 @@ class MainController < ApplicationController
   end
 
   def menu
-
+    @recipes = Recipe.order("RAND()").first(3)
   end
 
   def success
@@ -39,15 +39,5 @@ class MainController < ApplicationController
 
   def stars
     render :text => params.inspect
-  end
-
-  private
-
-  def authentication?
-    if current_user 
-      true
-    else
-      redirect_to :root
-    end
   end
 end
