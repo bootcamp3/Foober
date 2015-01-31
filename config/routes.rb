@@ -19,7 +19,9 @@ Rails.application.routes.draw do
   post 'recipes/:id/dislike' => 'recipes#dislike'
 
   # Orders
+  resources :orders
 
-  post 'orders/new' => 'orders#new'
+  # grape API
+  mount API => '/api'
 
 end
