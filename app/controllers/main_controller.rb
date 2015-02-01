@@ -13,12 +13,9 @@ class MainController < ApplicationController
   end
 
   def index
-    
   end
 
   def branch
-
-
   end
 
   def ingredient
@@ -26,15 +23,14 @@ class MainController < ApplicationController
   end
 
   def menu
-    @recipes = Recipe.order("RAND()").first(3)
+    raw_recipes = Recipe.where.not(id: nil)
+    @recipes = raw_recipes.find(raw_recipes.ids.sample(3))
   end
 
   def success
-
   end
 
   def feedback
-
   end
 
   def stars
