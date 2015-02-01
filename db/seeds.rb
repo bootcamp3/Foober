@@ -10,7 +10,7 @@ Ingredient.create(name: "番茄")
 Ingredient.create(name: "蝦仁")
 Recipe.create(name: "主廚推薦",
               description: "吃我的姚明啦～",
-              ingredient: "恩恩", "哈哈", "去洗澡")
+              ingredient: "恩恩,哈哈,去洗澡")
 Recipe.create(name: "壽喜燒牛丼飯",
               description: "喜歡吃日式料理中的牛丼嗎？快速的動手做吧～",
               flavor: "日式",
