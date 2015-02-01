@@ -28,6 +28,7 @@ module Foober
       post ':id' do
         order = Order.find(params[:id])
         order.chef_confirm
+        Rails.logger.info(params)
       end
     end
 
@@ -35,8 +36,17 @@ module Foober
       desc 'get menu tonight'
       get ':id' do
         order = Order.find(params[:id])
+        recipe = order.recipe
         if order.set_up?
-          order.recipe
+          [{
+            order: {
+              id: order.id
+            },
+            recipe: {
+              name: recipe.name,
+              content: recipe.content
+            }
+          }]
         end
       end
     end

@@ -45,7 +45,7 @@ Recipe.create(name: "韭黃炒牛肉絲",
 Recipe.create(name: "蕃茄海鮮義大利麵",
               flavor: "義式",
               ingredient: "番茄,蝦仁,義大利麵",
-              content: "/images/recipe_images/番茄海鮮義大利麵.jpg")
+              content: "/images/recipe_images/蕃茄海鮮義大利麵.jpg")
 Recipe.create(name: "韭黃牛肉餛飩餡",
               flavor: "中式",
               ingredient: "韭黃,牛肉,麵粉",
