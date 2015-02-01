@@ -10,7 +10,6 @@
 /* Basic */
   .all-stars{
     position:absolute;
-/*    width: 100%;*/
     left: 50%;
     transform: translate(-50%,0);
   }
@@ -370,7 +369,6 @@
       input[type="radio"] + label:before {
         -moz-osx-font-smoothing: grayscale;
         -webkit-font-smoothing: antialiased;
-        font-family: FontAwesome;
         font-style: normal;
         font-weight: normal;
         text-transform: none !important;
@@ -397,7 +395,7 @@
       background: #666;
       border-color: #666;
       color: #ffffff;
-      content: '\f00c';
+      content: ': )';
     }
 
     input[type="checkbox"]:focus + label:before,
@@ -1461,4 +1459,9 @@
 
     #cta .formerize-placeholder {
       color: rgba(255, 255, 255, 0.75) !important;
+    }
+
+    .cuisine{
+      height: 420px;
+      overflow: hidden;
     }
