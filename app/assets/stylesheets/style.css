@@ -1465,3 +1465,7 @@
       height: 420px;
       overflow: hidden;
     }
+
+    body{
+      overflow: hidden;
+    }

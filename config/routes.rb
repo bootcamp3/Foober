@@ -19,8 +19,6 @@ Rails.application.routes.draw do
 
   post 'recipes/search' => 'recipes#search'
   get 'recipes/result' => 'recipes#result'
-  post 'recipes/:id/like' => 'recipes#like'
-  post 'recipes/:id/dislike' => 'recipes#dislike'
 
   # Orders
   resources :orders
