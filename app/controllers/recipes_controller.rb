@@ -1,8 +1,8 @@
 class RecipesController < ApplicationController
   def search
-    @search = params[:recipe][:ingredient_ids]
-
-    redirect_to main_menu_path
+    ingredients = params[:recipe][:ingredient_ids]
+    recipe_match = Recipe.find_recipes(ingredients)
+    redirect_to main_menu_path(recipes: recipe_match)
   end
 
 
@@ -13,13 +13,5 @@ class RecipesController < ApplicationController
     order.menu_decide
     order.save!
     redirect_to main_success_path
-  end
-
-  def like
-
-  end
-
-  def dislike
-
   end
 end
