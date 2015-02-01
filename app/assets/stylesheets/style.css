@@ -34,8 +34,7 @@
 
   #icebox img{
     display: inline-block;
-    width: 50%;
-    height: 50%;
+    width: 200px;
   }
 
   .food {
@@ -1464,10 +1463,11 @@
     }
 
     .cuisine{
-      height: 420px;
+      height: 500px;
       overflow: hidden;
     }
 
-    body{
-      overflow: hidden;
+    .notice{
+      border: 10px solid red;
+      padding: 2%;
     }

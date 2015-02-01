@@ -23,7 +23,12 @@ class MainController < ApplicationController
   end
 
   def menu
-    @recipes = Recipe.find(params[:recipes])
+    if params[:recipes]
+      @recipes = Recipe.find(params[:recipes])
+    else
+      flash[:no_recipe] = "找不到食譜:("
+      redirect_to main_ingredient_path
+    end
   end
 
   def success

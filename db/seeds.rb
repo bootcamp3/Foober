@@ -8,6 +8,8 @@ Ingredient.create(name: "義大利麵")
 Ingredient.create(name: "韭黃")
 Ingredient.create(name: "番茄")
 Ingredient.create(name: "蝦仁")
+Recipe.create(name: "主廚推薦",
+              description: "吃我的姚明啦～")
 Recipe.create(name: "壽喜燒牛丼飯",
               description: "喜歡吃日式料理中的牛丼嗎？快速的動手做吧～",
               flavor: "日式",
