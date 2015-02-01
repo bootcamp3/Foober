@@ -6,8 +6,13 @@
     </div>
       <%= form_for @recipe, :url => recipes_search_path do |r| %>
         <%= r.collection_check_boxes(:ingredient_ids, Ingredient.all, :id, :name) %>
-        
         <div><%= r.submit "送出", :class => "button special" %></div>
       <% end %>
   </header>
 </section>
+
+<script>
+  $(function() {
+    $("input[name='recipe[ingredient_ids][]'][type='hidden']").remove()
+  });
+</script>
