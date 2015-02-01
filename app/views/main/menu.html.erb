@@ -5,7 +5,7 @@
     <% @recipes.each do |r| %>
     <div>
       <p><%= r.name %></p><br>
-      <img class="food" src="http://pic.pimg.tw/dreamyeh/normal_4b0ca8ee55164.jpg" alt="">
+      <img class="food" src="<%= r.content %>" alt="">
     </div>
     <% end %>
     <div class="last-one">
