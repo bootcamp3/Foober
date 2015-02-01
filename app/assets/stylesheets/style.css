@@ -8,6 +8,8 @@
 */
 
 /* Basic */
+
+
   .all-stars{
     position:absolute;
     left: 50%;
@@ -96,7 +98,7 @@
 
   h2 {
     font-size: 2.25em;
-    line-height: 1.5em;
+/*    line-height: 1.5em;*/
     letter-spacing: -0.035em;
   }
 
@@ -250,7 +252,7 @@
     display: block;
     font-size: 0.9em;
     font-weight: 300;
-    margin: 0 0 1em 0;
+    margin: 0 0 0.5em 0;
   }
 
   input[type="text"],
@@ -358,10 +360,10 @@
       color: #777;
       cursor: pointer;
       display: inline-block;
-      font-size: 1em;
+/*      font-size: 1em;*/
       font-weight: 300;
-      padding-left: 2.55em;
-      padding-right: 0.75em;
+      padding-left: 2em;
+      padding-right: 0.5em;
       position: relative;
     }
 
@@ -1340,7 +1342,7 @@
         display: inline-block;
         font-style: normal;
         margin: 1em 0 0 0;
-        padding: 1em 0 1.25em 0;
+/*        padding: 1em 0 1.25em 0;*/
       }
 
   body.landing #main {
