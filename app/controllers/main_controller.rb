@@ -23,8 +23,7 @@ class MainController < ApplicationController
   end
 
   def menu
-    raw_recipes = Recipe.where.not(id: nil)
-    @recipes = raw_recipes.find(raw_recipes.ids.sample(3))
+    @recipes = Recipe.find(params[:recipes])
   end
 
   def success
