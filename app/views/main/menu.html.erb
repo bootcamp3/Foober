@@ -1,14 +1,32 @@
 <section id="main">
   <header>
     <h2>推薦菜單</h2>
+    <div class="cuisine">
+    <% @recipes.each do |r| %>
     <div>
-      <p><%= @recipes.first.name %></p><br>
-      <img class="food" src="" alt="">
+      <p><%= r.name %></p><br>
+      <img class="food" src="http://pic.pimg.tw/dreamyeh/normal_4b0ca8ee55164.jpg" alt="">
     </div>
-
+    <% end %>
+    <div class="last-one">
+      <p>享受主廚為您烹調的暖心料理吧:)</p><br>
+      <img class="food" src="http://i.dongtw.com/2014/11/550x-Yao-Ming-everywhere-2_27.gif" alt="">
+    </div>
+    </div>
     <div>
       <%= link_to "喜歡", recipes_result_path(:recipe_id => @recipes.first.id), :class => "button special"%>
-      <%= link_to "不喜歡", main_success_path, :class => "button"  %>
+      <a href="#" class="button dislike">不喜歡</a>
     </div>
   </header>
 </section>
+
+<script>
+  $(function(){
+    $(".dislike").click(function(){
+      $(".cuisine>div:first").remove();
+      if ( $(".cuisine>div:first").hasClass("last-one") ){
+        $(".dislike").remove();
+      }
+    })
+  });
+</script>
