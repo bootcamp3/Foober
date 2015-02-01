@@ -2,20 +2,25 @@
   <header>
     <h2>推薦菜單</h2>
     <div class="cuisine">
-    <% @recipes.each do |r| %>
-    <div>
-      <p><%= r.name %></p><br>
-      <img class="food" src="<%= r.content %>" alt="">
-    </div>
-    <% end %>
-    <div class="last-one">
-      <p>享受主廚為您烹調的暖心料理吧:)</p><br>
-      <img class="food" src="http://i.dongtw.com/2014/11/550x-Yao-Ming-everywhere-2_27.gif" alt="">
-    </div>
-    </div>
-    <div>
-      <%= link_to "喜歡", recipes_result_path(:recipe_id => @recipes.first.id), :class => "button special"%>
-      <a href="#" class="button dislike">不喜歡</a>
+      <% @recipes.each do |r| %>
+        <div>
+          <div>
+            <p><%= r.name %></p><br>
+            <img class="food" src="<%= r.content %>" alt="">
+          </div>
+          <div>
+            <%= link_to "喜歡", recipes_result_path(:recipe_id => r.id), :class => "button special"%>
+            <a href="#" class="button dislike">不喜歡</a>
+          </div>
+        </div>
+      <% end %>
+      <div class="last-one">
+        <p>享受主廚為您烹調的暖心料理吧:)</p><br>
+        <img class="food" src="http://i.dongtw.com/2014/11/550x-Yao-Ming-everywhere-2_27.gif" alt="">
+        <div>
+          <%= link_to "讓專業的來", recipes_result_path(:recipe_id => 1), :class => "button special"%>
+        </div>
+      </div>
     </div>
   </header>
 </section>
@@ -24,9 +29,6 @@
   $(function(){
     $(".dislike").click(function(){
       $(".cuisine>div:first").remove();
-      if ( $(".cuisine>div:first").hasClass("last-one") ){
-        $(".dislike").remove();
-      }
     })
   });
 </script>
